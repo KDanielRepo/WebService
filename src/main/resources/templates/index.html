@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        .login{
+        color: BLACK;
+        position: fixed;
+        top: 0;
+        right: 0;
+        }
+        .logo{
+        position: fixed;
+        width: 100%;
+        height: 20%;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+        }
+        .one{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+        .two{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+        .input{
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+        .search{
+        position: fixed;
+        top: 45%;
+        left: 56%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+
+    </style>
+</head>
+<body>
+<button type="button" class="login">Zaloguj</button>
+
+<img src="https://bi.im-g.pl/im/14/69/fe/z16673044V,Rodzina-kapibara.jpg" class="logo">
+<p class="one">Sprawdź gdzie jest twoja przesyłka!</p>
+<label for="search" class="two">Wpisz numer swojej przesyłki.</label>
+<div class="input">
+    <form method="get" th:object="${przesylka}" name="form" th:action="@{/index}">
+        <input type="text" id="search" name="search">
+        <input type="submit" value="Szukaj">
+        <h1 th:text="*{koszt}"></h1>
+        <!--<th th:text="*{koszt}"></th>-->
+    </form>
+</div>
+</body>
+</html>

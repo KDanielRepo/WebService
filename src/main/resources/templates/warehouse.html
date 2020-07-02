@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn</title>
+    <style>
+        .logo{
+        position: fixed;
+        width: 100%;
+        height: 20%;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+        }
+        .logout{
+        position: fixed;
+        left: 90%;
+        top: 0%;
+        width: 10%;
+        height: 3%;
+        }
+        .paczka{
+        position: fixed;
+        top: 40%;
+        left: 0%;
+
+        }
+        .magazyn{
+        position: fixed;
+        top: 40%;
+        left: 33%;
+        }
+
+        table,th,td{
+        width: 33%;
+        border: 1px solid black;
+        }
+        .ptable{
+        height: 50%
+        width: 33%;
+        border: 1px solid black;
+        }
+        table{
+        height: 60%;
+        }
+        .button1{
+        position: fixed;
+        top: 95%;
+        left: 66%;
+        height: 5%;
+        width: 17%;
+        }
+        .button2{
+        position: fixed;
+        top: 95%;
+        left: 83%;
+        height: 5%;
+        width: 17%;
+        }
+        .pracownik{
+        position: fixed;
+        top: 40%;
+        left: 66%;
+        height: 55%;
+        width: 34%;
+        }
+        th{
+        height: 10%;
+        }
+        .th2{
+        height: 11%;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="Wyloguj" class="logout">
+<table class="paczka">
+    <tr>
+        <th>Paczka</th>
+    </tr>
+    <tr>
+        <td>test</td>
+    </tr>
+</table>
+<table class="magazyn">
+    <tr>
+        <th>Magazyn</th>
+    </tr>
+    <tr>
+        <td>test</td>
+    </tr>
+</table>
+<table class="pracownik">
+    <tr>
+        <th class="th2">
+            <a>Pracownik: </a>
+            <select>
+                <option th:each="string : ${names}" th:text="${string}"></option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <td>test</td>
+    </tr>
+    <tr>
+        <td>test2</td>
+    </tr>
+    <tr>
+        <td>test3</td>
+    </tr>
+    <tr>
+        <td>test4</td>
+    </tr>
+</table>
+<input type="button" value="Odrzuć zmiany" class="button1">
+<input type="button" value="Zapisz zmiany" class="button2">
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .logo{
+        position: fixed;
+        width: 100%;
+        height: 20%;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+        }
+        .login{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+        .password{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+
+    </style>
+</head>
+<body>
+<div class="login">
+<form method="get" th:object="${infos}" name="form" th:action="@{/login}" >
+    <input type="text" value="" id="login" name="login">
+    <input type="password" value="" id="password" name="password">
+    <input type="submit" value="Zaloguj">
+    <!--<th th:text="*{koszt}"></th>-->
+    <h1 th:text="*{info}"></h1>
+</form>
+</div>
+</body>
+</html>
